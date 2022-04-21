@@ -1,0 +1,32 @@
+/* 
+https://www.awwwards.com/sites/fay
+#FFFFFF
+#5D5C61 - Smoky(grey)   # Text Color
+#379683 - Gossamer(blue) 
+#7395AE - Bermuda Grey  # Header and Footer Color
+#557A95 - Kashmir Blue  #Button and Darker Color
+#B1A296 - Cloudy (grey) 
+#F4F7F6 - Mint Cream  # Main Background Color
+*/
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+header {
+  background-color: #7395ae;
+  padding: 1rem;
+}
+header a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+}
