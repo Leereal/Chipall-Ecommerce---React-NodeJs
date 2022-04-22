@@ -21,8 +21,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.site-container {
+  min-height: 100vh;
+}
 main {
-  padding: 1rem;
+  flex: 1;
+}
+.btn-primary {
+  background-color: #557a95;
 }
 header {
   background-color: #7395ae;
@@ -52,4 +58,11 @@ header a {
 
 .product-info {
   padding: 1rem;
+}
+
+.rating span {
+  color: #ffc000;
+}
+.img-large {
+  max-width: 100%;
 }
