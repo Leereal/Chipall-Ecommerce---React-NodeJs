@@ -59,3 +59,17 @@ CREATE PRODUCT DETAILS SCREEN
 1. fetch product from backend
 2. create 3 columns for image, info and action
 3. Show the product name in the Title of the tab - Use npm install react-helmet-async
+
+CREATE LOADING AND MESSAGE COMPONENT
+
+1. create loading component
+2. use spinner component
+3. craete message component
+4. create utils.js to define getError fuction
+
+IMPLEMENT ADD TO CART
+
+1. Create React Context
+2. define reducer
+3. create store provider
+4. implement add to cart button click handler

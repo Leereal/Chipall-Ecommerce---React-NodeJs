@@ -9,6 +9,9 @@ import Badge from 'react-bootstrap/Badge';
 import Card from 'react-bootstrap/Card';
 import Rating from '../components/Rating';
 import Button from 'react-bootstrap/Button';
+import LoadingBox from '../components/LoadingBox';
+import MessageBox from '../components/MessageBox';
+import { getError } from '../utils';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -39,16 +42,16 @@ export default function Product() {
         const result = await axios.get(`/api/product/id/${id}`);
         dispatch({ type: 'FETCH_SUCCESS', payload: result.data });
       } catch (err) {
-        dispatch({ type: 'FETCH_FAIL', payload: err.message });
+        dispatch({ type: 'FETCH_FAIL', payload: getError(err) });
       }
     };
     fetchData();
   }, [id]);
 
   return loading ? (
-    <div>Loading...</div>
+    <LoadingBox />
   ) : error ? (
-    <div>{error}</div>
+    <MessageBox variant="danger">{error}</MessageBox>
   ) : (
     <div>
       <Row>
@@ -97,10 +100,8 @@ export default function Product() {
                 </ListGroup.Item>
                 <ListGroup.Item>
                   <Row>
-                    <Col>Price : </Col>
+                    <Col>Status : </Col>
                     <Col>
-                      {' '}
-                      {product.currency}
                       {product.countInStock > 0 ? (
                         <Badge bg="success">In Stock</Badge>
                       ) : (
